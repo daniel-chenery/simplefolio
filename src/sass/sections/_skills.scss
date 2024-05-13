@@ -1,0 +1,63 @@
+#skills {
+    padding-bottom: 7rem;
+}
+
+.skill {
+    list-style: none;
+
+    &__item {
+        min-width: 100px;
+        padding: 0 50px;
+
+        .skill__icon {
+            font-size: $big-font-size * 2;
+            filter: grayscale(100%);
+            transition: filter 0.25s ease-in;
+        }
+
+        &:hover .skill__icon {
+            filter: grayscale(0%);
+        }
+    }
+
+    &__name {
+        margin-top: 1rem;
+    }
+}
+
+.marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+
+    &:hover .marquee__content {
+        animation-play-state: paused;
+    }
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+        animation-play-state: paused !important;
+    }
+}

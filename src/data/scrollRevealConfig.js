@@ -44,6 +44,16 @@ export const targetElements = [
     },
   },
   {
+    element: ".skill",
+    animation: {
+      delay: 1000,
+      origin: "bottom",
+      viewOffset: {
+        right: -4000
+      }
+    },
+  },
+  {
     element: ".contact-wrapper",
     animation: {
       delay: 800,
