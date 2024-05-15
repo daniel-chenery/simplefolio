@@ -6,7 +6,7 @@ export const defaultProps = {
   mobile: true,
 };
 
-export const targetElements = [
+export const targetElements: Array<{ element: string, animation: scrollReveal.ScrollRevealObjectOptions }> = [
   {
     element: ".section-title",
     animation: {
@@ -44,13 +44,10 @@ export const targetElements = [
     },
   },
   {
-    element: ".skill",
+    element: ".skill:not(.marquee__cloned)",
     animation: {
       delay: 1000,
       origin: "bottom",
-      viewOffset: {
-        right: -4000
-      }
     },
   },
   {

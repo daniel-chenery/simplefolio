@@ -4,8 +4,8 @@ export function initialiseMarquee() {
     contents.forEach(content => {
         const cloned = content.cloneNode(true) as HTMLElement;
         cloned.setAttribute('aria-hidden', 'true');
+        cloned.classList.add('marquee__cloned');
 
         content.insertAdjacentElement('afterend', cloned);
-        content.parentElement?.appendChild(content);
     });
 }
