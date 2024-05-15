@@ -1,9 +1,12 @@
-#skills {
+#skill {
     padding-bottom: 7rem;
 }
 
 .skill {
-    list-style: none;
+    &__list {
+        list-style: none;
+        padding: 0;
+        }
 
     &__item {
         min-width: 100px;
@@ -26,7 +29,7 @@
 }
 
 .marquee {
-    --gap: 1rem;
+    --gap: 0rem;
     display: flex;
     overflow: hidden;
     user-select: none;
@@ -57,6 +60,27 @@
 
 /* Pause animation when reduced-motion is set */
 @media (prefers-reduced-motion: reduce) {
+
+    .skill__wrapper {
+        display: block;
+        overflow: auto;
+
+        .marquee__cloned {
+            display: none;
+        }
+    }
+
+    .skill__list {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .skill__item {
+        flex-grow: 1;
+        flex-basis: min-content;
+        padding-bottom: 2em;
+    }
+
     .marquee__content {
         animation-play-state: paused !important;
     }

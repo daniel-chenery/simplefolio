@@ -82,8 +82,26 @@
   }
 }
 
-/* Resume Style */
-.cta-btn--resume {
+.cta-btn--primary {
+  color: $dark-grey;
+  border: 2px solid $dark-grey;
+
+  &::after {
+    background: $dark-grey;
+  }
+
+  &:hover {
+    color: $white-color;
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Secondary Style */
+.cta-btn--secondary {
   color: $white-color;
   border: 2px solid $white-color;
 
