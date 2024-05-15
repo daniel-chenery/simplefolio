@@ -20,6 +20,7 @@
     <title>Daniel Chenery | Software Engineer</title>
     <meta name="description" content="Daniel Chenery, a (mostly) self-taught full-stack developer since 2012. Beginning in the web world, moving to software with a solid understand of the .NET ecosystem." />
 
+    <!-- Use npm? -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="styles.scss" />
     <script defer src="pre.js" type="module"></script>
@@ -74,8 +75,8 @@
               <span class="d-flex mt-3">
                 <a
                   rel="noreferrer"
-                  class="cta-btn cta-btn--resume"
-                  href="#skills"
+                  class="cta-btn cta-btn--secondary"
+                  href="#skill"
                 >
                   View Skills
                 </a>
@@ -87,12 +88,12 @@
     </section>
     <!-- /END About Section -->
 
-    <section id="skills">
+    <section id="skill">
       <div class="container">
         <h2 class="section-title dark-blue-text">Skills</h2>
         
-        <div class="marquee">
-          <ul class="skill marquee__content">
+        <div class="skill__wrapper marquee">
+          <ul class="skill__list marquee__content">
             <li class="skill__item">
               <i class="skill__icon devicon-csharp-plain colored"></i>
               <p class="skill__name">C#</p>
@@ -174,6 +175,11 @@
             </li>
 
             <li class="skill__item">  
+              <i class="skill__icon devicon-html5-plain colored"></i>
+              <p class="skill__name">HTML</p>
+            </li>
+
+            <li class="skill__item">  
               <i class="skill__icon devicon-sass-plain colored"></i>
               <p class="skill__name">SASS</p>
             </li>
@@ -215,6 +221,15 @@
 
           </ul>
         </div>
+
+        <span class="d-flex mt-3">
+          <a
+            rel="noreferrer"
+            class="cta-btn cta-btn--primary"
+            href="#list-view">
+            View as List
+          </a>
+        </span>
       </div>
 
     </section>
@@ -228,7 +243,7 @@
           <a
             rel="noreferrer"
             target="_blank"
-            class="cta-btn cta-btn--resume"
+            class="cta-btn cta-btn--secondary"
             href="mailto:example@email.com"
             >Call to Action</a
           >

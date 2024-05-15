@@ -44,10 +44,11 @@ export const targetElements: Array<{ element: string, animation: scrollReveal.Sc
     },
   },
   {
-    element: ".skill:not(.marquee__cloned)",
+    element: ".skill__wrapper",
     animation: {
       delay: 1000,
       origin: "bottom",
+      distance: '125px'
     },
   },
   {
