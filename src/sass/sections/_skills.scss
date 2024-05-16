@@ -58,30 +58,39 @@
     }
 }
 
-/* Pause animation when reduced-motion is set */
-@media (prefers-reduced-motion: reduce) {
-
-    .skill__wrapper {
+@mixin stack($selector) {
+    #{$selector} {
         display: block;
         overflow: auto;
 
         .marquee__cloned {
             display: none;
         }
-    }
 
-    .skill__list {
-        flex-wrap: wrap;
-        align-content: center;
+        .skill__list {
+            flex-wrap: wrap;
+            align-content: center;
+        }
+    
+        .skill__item {
+            flex-grow: 1;
+            flex-basis: min-content;
+            padding-bottom: 2em;
+        }
+    
+        .marquee__content {
+            animation: none;
+        }
     }
+}
 
-    .skill__item {
-        flex-grow: 1;
-        flex-basis: min-content;
-        padding-bottom: 2em;
-    }
+@include stack('.skill__wrapper--stacked');
 
-    .marquee__content {
-        animation-play-state: paused !important;
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+    @include stack('.skill__wrapper');
+
+    .skill__toggle {
+        display: none;
     }
 }
