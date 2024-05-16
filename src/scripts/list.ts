@@ -34,7 +34,7 @@ export class SkillList {
         tree?.classList.remove(`${this._wrapper}${this._stacked}`)
 
         if (this._target) {
-            this._target.text = 'grid_on';
+            this._target.text = 'block';
         }
 
         this.isStacked = false;
